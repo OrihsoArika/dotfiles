@@ -1,0 +1,7 @@
+#!/bin/sh
+
+selected=$(ls "$HOME/.config" | rofi -dmenu -p "Everithing: ")
+
+[[ -z $selected ]] && exit
+
+vim $HOME/.config/$selected

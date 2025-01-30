@@ -1,0 +1,16 @@
+configuration {
+    show-icons: true;
+    font: "Lexend 11";
+    icon-theme: "Papirus";
+
+    display-ssh:    "󰣀 ssh:";
+    display-run:    "󱓞 run:";
+    display-drun:   "󰣖 drun:";
+    display-window: "󱂬 window:";
+    display-combi:  "󰕘 combi:";
+    display-filebrowser: "󰉋 filebrowser:";
+
+    dpi: 112;
+}
+
+@theme "gruvbox-dark-med"
