@@ -3,12 +3,12 @@ configuration {
     font: "Lexend 11";
     icon-theme: "Papirus";
 
-    display-ssh:    "󰣀 ssh:";
-    display-run:    "󱓞 run:";
-    display-drun:   "󰣖 drun:";
-    display-window: "󱂬 window:";
-    display-combi:  "󰕘 combi:";
-    display-filebrowser: "󰉋 filebrowser:";
+    display-ssh:    "󰣀  SSH:";
+    display-run:    "󱓞  Run:";
+    display-drun:   "󰣖  Apps:";
+    display-window: "󱂬  Window:";
+    display-combi:  "󰕘  Combi:";
+    display-filebrowser: "󰉋  Filebrowser:";
 
     dpi: 112;
 }

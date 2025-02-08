@@ -4,7 +4,7 @@
 ## It's a very basic and simple config file, for full configuration, Run `man 5 alacritty`
 
 ## GENERAL --------------------------------------------------------
-
+[general]
 ## Import additional configuration files.
 import = ["~/.config/alacritty/colors.toml", "~/.config/alacritty/fonts.toml"]
 
@@ -33,9 +33,9 @@ WINIT_X11_SCALE_FACTOR = "1.0"
 ## WINDOW ---------------------------------------------------------
 [window]
 position = "None"
-dynamic_padding = true
+dynamic_padding = false
 decorations = "full"
-opacity = 1.0
+opacity = 1
 blur = false
 startup_mode = "Windowed"
 dynamic_title = true
