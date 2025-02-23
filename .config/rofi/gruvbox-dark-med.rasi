@@ -22,19 +22,21 @@
     orange: #d65d0e;
     green: #98971a;
 
-    background-color: transparent;
+    background-color: @bg0;
 }
 
 window {
     height: 600;
     width: 600;
     
-    border: 0;
-    border-radius: 0;
-    border-color: transparent;
+    border: 1;
+    border-radius: 6;
+
+    border-color: @bg3;
+    background-color: @bg3;
 }
 mainbox {
-    spacing: 20;
+    spacing: 0;
     children: [inputbar, message, listview];
 }
 
@@ -43,9 +45,8 @@ inputbar {
     
     padding: 14; //similar to a height function (in this case)
     
-    border-radius: 12;
-    border: 2 ;
-    border-color: @orange;
+    border-radius: 0;
+    border: 0 ;
 
     background-color: @bg0;
 }
@@ -58,7 +59,7 @@ listview {
     padding: 8;
     
     border-radius: 12;
-    border: 2 ;
+    border: 0 ;
     border-color: @orange;
 
     background-color: @bg0;
