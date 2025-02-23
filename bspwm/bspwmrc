@@ -2,12 +2,14 @@
 
 pgrep -x sxhkd > /dev/null || sxhkd &
 
-picom --backend xrender &
+sh ~/.config/bspwm/autostart
+
 nm-applet &
 dunst &
-nitrogen --restore
 polkit &
 xset -dpms s off &
+
+feh --bg-scale ~/Downloads/Telegram\ Desktop/nvim.png
 
 bspc monitor -d I II III IV V VI VII VIII IX
 

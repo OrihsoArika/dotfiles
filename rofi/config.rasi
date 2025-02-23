@@ -1,7 +1,7 @@
 configuration {
     show-icons: true;
     font: "Lexend 11";
-    icon-theme: "Papirus";
+    icon-theme: "Gruvbox Plus Dark";
 
     display-ssh:    "󰣀  SSH:";
     display-run:    "󱓞  Run:";

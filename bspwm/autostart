@@ -1,0 +1,7 @@
+#!/bin/sh
+
+killall picom
+polybar-msg cmd quit
+sleep 0.5
+polybar
+picom --backend xrender --vsync
