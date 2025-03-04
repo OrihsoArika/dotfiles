@@ -18,6 +18,6 @@ you should have installed:
 - a polkit app
 - yshui/picom
 
-For the gruvbox GTK theme, you can use  [https://github.com/Fausto-Korpsvart/Gruvbox-GTK-Theme](this one)
+For the gruvbox GTK theme, you can use (https://github.com/Fausto-Korpsvart/Gruvbox-GTK-Theme)[this one]
 
 just copy or symlink them into your `~/.config` directory.
