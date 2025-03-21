@@ -38,7 +38,7 @@ super + g
 #
 
 # set the window state
-super + {shift+ e,shift + t,e,f}
+super + {shift+ w,p,w,f}
 	bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
 
 # set the node flags
@@ -62,9 +62,9 @@ super + {_,alt + }c
 	bspc node -f {next,prev}.local.!hidden.window
 
 # focus the next/previous desktop in the current monitor
-F{7,8}
-  bspc desktop -f {prev,next}.local
-
+#F{7,8}
+#  bspc desktop -f {prev,next}.local
+#
 # focus the last node/desktop
 super + {grave,Tab}
 	bspc {desktop,node} -f last

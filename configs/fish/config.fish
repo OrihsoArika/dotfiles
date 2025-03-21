@@ -10,12 +10,13 @@ end
 # checking if tmux is not already running
 if type -q tmux
     if not test -n "$TMUX"
-        tmux attach-session -t default; or tmux new-session -s default
+        tmux -u attach-session -t default ; or tmux -u new-session -s default 
     end
 end
 
-# Set up fzf key bindings
+# pipe apps to fish
 fzf --fish | source
+starship init fish | source
 
 # Command aliases
 
