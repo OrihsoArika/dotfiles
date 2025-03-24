@@ -4,16 +4,16 @@ size = 10
 builtin_box_drawing = true
 
 [font.normal]
-family = "Mononoki Nerd Font"
+family = "IosevkaTerm Nerd Font"
 
 [font.bold]
-family = "Mononoki Nerd Font"
+family = "IosevkaTerm Nerd Font"
 
 [font.italic]
-family = "Monooki Nerd Font"
+family = "IosevkaTerm Nerd Font"
 
 [font.bold_italic]
-family = "Mononoki Nerd Font"
+family = "IosevkaTerm Nerd Font"
 
 [font.offset]
 x = 0

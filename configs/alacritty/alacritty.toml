@@ -50,7 +50,7 @@ shape = "Block"
 blinking = "On"
 
 [mouse]
-hide_when_typing = false
+hide_when_typing = true
 
 [[hints.enabled]]
 command         = "xdg-open"
