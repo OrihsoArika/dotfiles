@@ -1,0 +1,20 @@
+#!/bin/sh
+
+killall -9 picom 
+killall -9 polybar 
+
+redshift -x 
+
+killall -9 redshift
+
+
+while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
+while pgrep -u $UID -x picom >/dev/null; do sleep 1; done
+while pgrep -u $UID -x redshift >/dev/null; do sleep 1; done
+
+polybar -r &
+picom --vsync &
+redshift &
+
+otd-daemon &
+otd-gui &
