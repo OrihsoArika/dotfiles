@@ -6,10 +6,10 @@ configs that are here:
 - bspwm.
 - sxhkd.
 - polybar.
-- [https://github.com/yshui/picom](yshui's picom).
+- [yshui's picom](https://github.com/yshui/picom).
 - rofi.
 - tmux.
-- neovim [https://github.com/NVchad/NVchad]((NVchad)).
+- neovim ([NVchad](https://github.com/NVchad/NVchad)).
 - starship.
 - dunst.
 - alacritty.
@@ -21,6 +21,6 @@ you should have installed:
 - a polkit app.
 
 
-For the gruvbox GTK theme, you can use [https://github.com/Fausto-Korpsvart/Gruvbox-GTK-Theme](this one).
+For the gruvbox GTK theme, you can use [this one](https://github.com/Fausto-Korpsvart/Gruvbox-GTK-Theme).
 
 just copy or symlink them into your ~/.config directory.
