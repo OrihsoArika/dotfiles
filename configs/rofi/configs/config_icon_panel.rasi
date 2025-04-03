@@ -1,7 +1,7 @@
 configuration {
     show-icons: true;
-    font: "Lexend 11";
-    icon-theme: "Gruvbox Plus Light";
+    font: "Lexend 10";
+    icon-theme: "Gruvbox Plus Dark";
 
     display-ssh:    "󰣀  SSH:";
     display-run:    "󱓞  Run:";
@@ -10,7 +10,9 @@ configuration {
     display-combi:  "󰕘  Combi:";
     display-filebrowser: "󰉋  Filebrowser:";
 
+    location:7; yoffset:-32;
+
     //dpi: 112;
 }
 
-@theme "gruvbox-dark-med"
+@theme "gruvbox-dark-med-icon-dash"

@@ -9,10 +9,11 @@
 * {
     // BG variants
     bg0h: #f9f5d7;
-    bg0: #ebdbb2;
+    bg0: #f2e5bc;
+    bg0m:#ebdbb2;
     bg1: #d5c4a1;
 
-    bg3: #bdae93;
+    bg3: #a89984;
 
     //foreground
     fg0: #32302f;
@@ -27,29 +28,30 @@
 }
 
 window {
-    height: 600;
-    width: 600;
-    
-    border: 0 1 4 1;
-    border-radius: 12;
-    border-color: @bg3;
+    height: 570;
+    width: 570;
 
+    border: 0 1 0 0;
+    border-radius: 0 12 0 0;
+
+    border-color: @bg3;
     background-color: @bg3;
 }
 mainbox {
     spacing: 0;
-    children: [inputbar, message, listview]; border: 2 0 0 0 ;
-    border-radius: 12;
-    border-color: @bg0h;
+    children: [inputbar, message, listview];
 }
 
 inputbar {
     color: @fg0;
     
     padding: 14; //similar to a height function (in this case)
-    border-radius: 12;
     
-       background-color: @bg0;
+    border-radius: 0 12 0 0;
+    border: 2 0 0 0;
+    border-color: @bg0h;
+
+    background-color: @bg0;
 }
 message {
     padding: 10;
@@ -57,13 +59,14 @@ message {
 }
 
 listview {
+    margin: 8 8 8 8;
     padding: 8;
     
-    border-radius: 12;
-    border: 0 ;
-    border-color: @orange;
+    border-radius: 12 12 12 12;
+    border: 1 ;
+    border-color: @bg3;
 
-    background-color: @bg0;
+    background-color: @bg0m;
     
     dynamic: true;
     
@@ -79,8 +82,13 @@ error-message {
     border: 20 20 20 20;
 }
 
-entry, prompt, case-indicator {
+prompt, case-indicator {
     text-color: inherit;
+}
+
+entry {
+    text-color: inherit;
+
 }
 
 prompt {
@@ -88,24 +96,18 @@ prompt {
 }
 
 element {
-    padding: 7;
+    padding: 3;
     vertical-align: 0.5;
-    border: 0 0 3 0;
     border-radius: 12;
     background-color: @bg1;
-    border-color: #a89984;
 }
 
 element.selected.normal {
     background-color: @bg3;
-    border: 2 0 0 0;
-    border-color: @bg0h;
 }
 
 element.alternate.normal {
-    background-color: #f2e5bc;
-    border-color: @bg3;
-    
+    background-color: @bg0m;
 }
 
 element.normal.active, element.alternate.active {
@@ -125,10 +127,9 @@ element.selected.urgent {
 }
 
 element-text, element-icon {
-    size: 24;
+    size: 32;
     margin: 0 10 0 0;
     vertical-align: 0.5;
-    horizontal-align: 0.5;
     background-color: inherit;
     text-color: @fg0;
 }

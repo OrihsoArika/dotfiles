@@ -1,4 +1,24 @@
 local plugins = {
+  {
+    "kdheepak/lazygit.nvim",
+    cmd = {
+      "LazyGit",
+      "LazyGitConfig",
+      "LazyGitCurrentFile",
+      "LazyGitFilter",
+      "LazyGitFilterCurrentFile",
+    },
+    -- optional for floating window border decoration
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+    },
+    -- setting the keybinding for LazyGit with 'keys' is recommended in
+    -- order to load the plugin when the command is run for the first time
+    keys = {
+      { "<leader>lg", "<cmd>LazyGit<cr>", desc = "Open lazy git" },
+    },
+  },
+
   { "rebelot/kanagawa.nvim" },
 
   { "elkowar/yuck.vim" },
@@ -85,8 +105,8 @@ local plugins = {
   { "nvim-neotest/nvim-nio" },
   {
     "rust-lang/rust.vim",
-    ft = {'rust'},
-    init = function ()
+    ft = { 'rust' },
+    init = function()
       vim.g.rustfmt_autosave = 1
     end
   },
@@ -94,10 +114,10 @@ local plugins = {
     "simrat39/rust-tools.nvim",
     ft = "rust",
     dependencies = "neovim/nvim-lspconfig",
-    opts = function ()
+    opts = function()
       return require("custom.configs.rust-tools")
     end,
-    config = function (_,opts)
+    config = function(_, opts)
       require("rust-tools").setup(opts)
     end
   }
