@@ -31,8 +31,8 @@ window {
     height: 570;
     width: 570;
 
-    border: 0 1 0 0;
-    border-radius: 0 12 0 0;
+    border: 0 0 3 0;
+    border-radius: 12;
 
     border-color: @bg3;
     background-color: @bg3;
@@ -62,7 +62,7 @@ listview {
     margin: 8 8 8 8;
     padding: 8;
     
-    border-radius: 12 12 12 12;
+    border-radius: 12;
     border: 1 ;
     border-color: @bg3;
 

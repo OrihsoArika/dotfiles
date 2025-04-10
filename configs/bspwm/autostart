@@ -7,14 +7,27 @@ redshift -x
 
 killall -9 redshift
 
-
 while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
 while pgrep -u $UID -x picom >/dev/null; do sleep 1; done
 while pgrep -u $UID -x redshift >/dev/null; do sleep 1; done
 
-polybar -r &
 picom --vsync &
+
 redshift &
 
 otd-daemon &
-otd-gui &
+
+sleep 0.75
+sleep 0.125
+polybar -r child1 &
+sleep 0.125
+polybar -r child2 &
+sleep 0.125
+polybar -r child3 &
+sleep 0.125
+polybar -r child4 &
+sleep 0.125
+polybar -r child5 &
+sleep 0.125
+polybar -r child6 &
+

@@ -10,7 +10,7 @@ configuration {
     display-combi:  "󰕘  Combi:";
     display-filebrowser: "󰉋  Filebrowser:";
 
-    location:7; yoffset:-32;
+    location:7; yoffset:-42; xoffset:10;
 
     //dpi: 112;
 }

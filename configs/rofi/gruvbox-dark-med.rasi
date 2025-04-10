@@ -88,7 +88,7 @@ prompt {
 }
 
 element {
-    padding: 7;
+    padding: 5;
     vertical-align: 0.5;
     border: 0 0 3 0;
     border-radius: 12;
@@ -125,7 +125,7 @@ element.selected.urgent {
 }
 
 element-text, element-icon {
-    size: 24;
+    size: 32;
     margin: 0 10 0 0;
     vertical-align: 0.5;
     horizontal-align: 0.5;
