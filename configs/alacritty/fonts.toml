@@ -1,19 +1,19 @@
 [font]
-size = 10.5
+size = 9.75
 
 builtin_box_drawing = true
 
 [font.normal]
-family = "ComicShannsMono Nerd Font"
+family = "FantasqueSansM Nerd Font"
 
 [font.bold]
-family = "ComicShannsMono Nerd Font"
+family = "FantasqueSansM Nerd Font"
 
 [font.italic]
-family = "ComicShannsMono Nerd Font"
+family = "FantasqueSansM Nerd Font"
 
 [font.bold_italic]
-family = "ComicShannsMono Nerd Font"
+family = "FantasqueSansM Nerd Font"
 
 [font.offset]
 x = 0

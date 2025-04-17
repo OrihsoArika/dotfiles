@@ -13,4 +13,4 @@ configuration {
     //dpi: 112;
 }
 
-@theme "gruvbox-dark-med"
+@theme "rose-pine"

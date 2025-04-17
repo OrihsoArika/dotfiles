@@ -1,0 +1,144 @@
+/**
+ * Gruvbox Material (Medium) theme
+ * Taken from: https://user-images.githubusercontent.com/58662350/213884019-cbcd5f00-5bef-4a37-9139-0570770330b6.png
+ * Repository: https://github.com/hiimsergey/rofi-gruvbox-material
+ */
+
+ // OrihsoArika is trying to make a fork, yiepeeee.
+
+* {
+    base: #191724;
+    surface: #1f1d2e;
+    overlay: #26233a;
+    muted: #6e6a86;
+    subtle: #908caa;
+
+    text: #e0def4;
+
+    highlight-low: #21202e;
+    highlight-med: #403d52;
+    highlight-high: #524f67;
+
+    love: #eb6f92;
+    gold: #f6c177;
+    rose: #ebbcba;
+    pine: #31748f;
+    foam: #9ccfd8;
+    iris: #c4a7e7;
+
+    background-color: @base;
+}
+
+window {
+    height: 572;
+    width: 600;
+    
+    border-radius: 10;
+    border: 1 1 4 1;
+    border-color: @highlight-med;
+
+    background-color: @base;
+}
+mainbox {
+    spacing: 0;
+    children: [inputbar, message, listview]; border: 2 0 0 0 ;
+    border-radius: 10;
+    border-color: @base;
+}
+
+inputbar {
+    color: @text;
+    
+    padding: 14; //similar to a height function (in this case)
+    border-radius: 10;
+    
+    background-color: @base;
+}
+message {
+    padding: 10;
+    background-color: @overlay;
+}
+
+listview {
+    margin:6;
+    padding: 10;
+    
+    border-color: @highlight-med;
+
+    border: 1;
+
+    border-radius: 10;
+
+    background-color: @surface;
+    
+    dynamic: true;
+    
+    children: [message];
+}
+
+textbox {
+    text-color: @text;
+}
+
+error-message {
+    border: 20 20 20 20;
+}
+
+entry, prompt, case-indicator {
+    text-color: inherit;
+}
+
+prompt {
+    margin: 0 10 0 0;
+}
+
+element {
+    padding: 5;
+    vertical-align: 0.5;
+    border-radius: 10;
+    background-color: @base;
+    border-color: @overlay;
+}
+
+element.selected.normal {
+    background-color: @highlight-med;
+    border-color: @highlight-high;
+}
+
+element.alternate.normal {
+    background-color: @surface;
+    border-color: @highlight-med;
+    
+}
+
+element.alternate.active-text,element.normal.active-text,element.normal.active, element.alternate.active{
+    background-color: @rose;
+    text-color: @base;
+    color: @base;
+}
+
+element.selected.active {
+    background-color: @pine;
+}
+
+element.normal.urgent, element.alternate.urgent {
+    background-color: @love;
+}
+
+element.selected.urgent {
+    background-color: @foam;
+}
+
+element-text, element-icon {
+    size: 32;
+    margin: 0 10 0 0;
+    vertical-align: 0.5;
+    horizontal-align: 0.5;
+    background-color: inherit;
+    text-color: @text;
+}
+
+element-text .active, element-text .urgent {
+    text-color: @text;
+}
+
