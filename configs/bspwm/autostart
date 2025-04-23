@@ -1,5 +1,7 @@
 #!/bin/sh
 
+export CURR_WM="bspwm"
+
 killall -9 picom 
 killall -9 polybar 
 
@@ -11,23 +13,13 @@ while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
 while pgrep -u $UID -x picom >/dev/null; do sleep 1; done
 while pgrep -u $UID -x redshift >/dev/null; do sleep 1; done
 
-picom --vsync &
+picom &
 
 redshift &
 
 otd-daemon &
 
-sleep 0.75
-sleep 0.125
-polybar -r child1 &
-sleep 0.125
-polybar -r child2 &
-sleep 0.125
-polybar -r child3 &
-sleep 0.125
-polybar -r child4 &
-sleep 0.125
-polybar -r child5 &
-sleep 0.125
-polybar -r child6 &
-
+sleep 0.3
+polybar -r root | tee /tmp/polybar.log & disown 
+# sleep 0.5
+# polybar -r outline | tee /tmp/polybar.log & disown 

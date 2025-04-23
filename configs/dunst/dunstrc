@@ -29,7 +29,7 @@
 
     # The height of a single notification, excluding the frame.
     # dynamic height from 0 to 300
-    height = (0, 200)
+    height = (0, 150)
     # constant height of 300
     # height = 300
     # NOTE: Dunst from version 1.11 and older don't support dynamic height
@@ -41,13 +41,14 @@
     # Offset from the origin
     # NOTE: Dunst from version 1.11 and older use this alternative notation
     # offset = 10x50
-    offset = (8, 40)
+    offset = (133, 65)
+    
 
     # Scale factor. It is auto-detected if value is 0.
     scale = 0
 
     # Maximum number of notification (0 means no limit)
-    notification_limit = 10
+    notification_limit = 5
 
     ### Progress bar ###
 
@@ -69,14 +70,14 @@
     progress_bar_max_width = 300
 
     # Corner radius for the progress bar. 0 disables rounded corners.
-    progress_bar_corner_radius = 12
+    progress_bar_corner_radius = 10
 
     # Define which corners to round when drawing the progress bar. If progress_bar_corner_radius
     # is set to 0 this option will be ignored.
     progress_bar_corners = all
 
     # Corner radius for the icon image.
-    icon_corner_radius = 12
+    icon_corner_radius = 10
 
     # Define which corners to round when drawing the icon image. If icon_corner_radius
     # is set to 0 this option will be ignored.
@@ -108,7 +109,7 @@
 
     # Defines width in pixels of frame around the notification window.
     # Set to 0 to disable.
-    frame_width = 2
+    frame_width = 0
 
     # Defines color of the frame around the notification window.
     frame_color = "#8ec07c"
@@ -323,7 +324,7 @@
     # * context_all: Open context menu for all notifications.
     # These values can be strung together for each mouse event, and
     # will be executed in sequence.
-    mouse_left_click = do_action, close_current
+    mouse_left_click = close_current
     mouse_middle_click = do_action, close_current
     mouse_right_click = context_all, close_current
 
@@ -341,7 +342,7 @@
 [urgency_low]
     # IMPORTANT: colors have to be defined in quotation marks.
     # Otherwise the "#" and following would be interpreted as a comment.
-    background = "#1d2021"
+    background = "#3c3638"
     foreground = "#ebdbb2"
     frame_color = "#458588"
     timeout = 10
@@ -357,7 +358,7 @@
     default_icon = dialog-information
 
 [urgency_critical]
-    background = "#1d2021"
+    background = "#96000d"
     foreground = "#ebdbb2"
     frame_color = "#cc241d"
     timeout = 0

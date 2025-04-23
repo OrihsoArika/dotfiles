@@ -12,7 +12,7 @@ WINIT_X11_SCALE_FACTOR = "1.0"
 position = "None"
 dynamic_padding = true
 decorations = "full"
-opacity = 0.7
+opacity = 1
 blur = false
 startup_mode = "Windowed"
 dynamic_title = true
@@ -24,8 +24,8 @@ columns = 120
 lines = 40
 
 [window.padding]
-x = 8
-y = 8
+x = 32
+y = 32
 
 [scrolling]
 history = 10000
@@ -69,4 +69,4 @@ log_level = "Warn"
 renderer = "None"
 print_events = false
 highlight_damage = false
-prefer_egl = false
+prefer_egl = true

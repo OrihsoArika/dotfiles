@@ -33,7 +33,7 @@ window {
     height: 572;
     width: 600;
     
-    border-radius: 10;
+    border-radius: 20;
     border: 1 1 4 1;
     border-color: @highlight-med;
 
@@ -41,8 +41,9 @@ window {
 }
 mainbox {
     spacing: 0;
-    children: [inputbar, message, listview]; border: 2 0 0 0 ;
-    border-radius: 10;
+    children: [inputbar, message, listview];
+    border: 0 0 0 0 ;
+    border-radius: 20;
     border-color: @base;
 }
 
@@ -50,7 +51,8 @@ inputbar {
     color: @text;
     
     padding: 14; //similar to a height function (in this case)
-    border-radius: 10;
+    margin: 3 0 7 0;
+    border-radius: 20;
     
     background-color: @base;
 }
@@ -60,14 +62,13 @@ message {
 }
 
 listview {
-    margin:6;
     padding: 10;
     
     border-color: @highlight-med;
 
-    border: 1;
+    border: 0;
 
-    border-radius: 10;
+    border-radius: 20;
 
     background-color: @surface;
     
@@ -93,9 +94,9 @@ prompt {
 }
 
 element {
-    padding: 5;
+    padding: 6;
     vertical-align: 0.5;
-    border-radius: 10;
+    border-radius: 20;
     background-color: @base;
     border-color: @overlay;
 }
@@ -129,7 +130,16 @@ element.selected.urgent {
     background-color: @foam;
 }
 
-element-text, element-icon {
+element-icon{
+
+    size: 32;
+    margin:0 10 0 5;
+    vertical-align: 0.5;
+    background-color: inherit;
+    text-color: @text;
+}
+
+element-text{
     size: 32;
     margin: 0 10 0 0;
     vertical-align: 0.5;
