@@ -25,7 +25,7 @@
     # dynamic width from 0 to 300
     # width = (0, 300)
     # constant width of 300
-    width = 250
+    width = 200
 
     # The height of a single notification, excluding the frame.
     # dynamic height from 0 to 300
@@ -36,12 +36,12 @@
     #       and the given value is treated as the maximum height
 
     # Position the notification in the top right corner
-    origin = top-right
+    origin = bottom-right
 
     # Offset from the origin
     # NOTE: Dunst from version 1.11 and older use this alternative notation
     # offset = 10x50
-    offset = (133, 65)
+    offset = (30, 30)
     
 
     # Scale factor. It is auto-detected if value is 0.
@@ -272,7 +272,7 @@
     # corners.
     # The radius will be automatically lowered if it exceeds half of the
     # notification height to avoid clipping text and/or icons.
-    corner_radius = 0
+    corner_radius = 10
 
     # Define which corners to round when drawing the window. If the corner radius
     # is set to 0 this option will be ignored.
