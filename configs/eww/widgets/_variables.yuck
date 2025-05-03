@@ -1,0 +1,12 @@
+(deflisten workspaces "scripts/get_bspwm_workspases.sh")
+
+(defpoll wifi_icon :interval "1s" "scripts/get_wifi.sh")
+;(defpoll workspace :interval "10s" "scripts/get_hyprland_workspases")
+
+(defpoll batteryPercent :interval "1s" "eww get EWW_BATTERY")
+
+(defpoll volumePercent :interval "2s" "pamixer --get-volume")
+
+(defpoll time :interval "10s"
+  `date +'{"hour":"%H","minute":"%M"}'`)
+

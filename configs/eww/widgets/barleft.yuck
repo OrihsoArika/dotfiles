@@ -1,0 +1,138 @@
+(defwindow barleft1
+  :monitor 0
+  :stacking "bg"
+  :wm-ignore true
+  :windowtype "normal"
+  :exclusive true
+  :geometry (geometry
+    :width "50px"
+    :height "100%"
+    :x "0px"
+    :y "0px"
+    :anchor "right center")
+  (bar) 
+)
+(defwidget bar []
+  (centerbox :class "bar" :orientation "v" :valign "false" :halign "false" :space-evenly false
+    (top)
+    (center)
+    (bottom)
+  )
+)
+
+(defwidget top []
+  (box
+    :orientation "v"
+    :valign "start"
+    :halign "false"
+    :space-evenly false
+    (powermenuButton)
+    (workspaces)
+  ))
+
+(defwidget center []
+  (box
+    :orientation "v"
+    :valign "start"
+    :halign "false"
+    :space-evenly false
+    (clock)
+  ))
+
+(defwidget bottom []
+(box :class "bottom" :orientation "v" :valign "end" :halign "false" :space-evenly false
+  (sysinfo)
+  (tray)
+  ))
+
+;(defwidget workspaces []
+;    (literal :class "workspace" :content workspace))
+(defwidget workspaces []
+  (literal :class "workspaces" :content workspaces))
+
+(defwidget powermenuButton []
+  (box
+    :class "powermenuButton"
+    :orientation "v"
+    :space-evenly false
+    (button :onclick "notify-send xd" "")
+  )
+)
+
+(defwidget clock []
+  (box
+    :class "clock"
+    :orientation "v"
+    :valign "center"
+    :halign "false"
+    :spacing 3
+  (label :text {time.hour})
+  (label :text {time.minute})
+  )
+)
+
+(defwidget sysinfo []
+  (box
+    :class "sysinfo"
+    :orientation "v"
+    :spacing 7
+    :space-evenly false
+    (voly)
+    (wify)
+    (baty)
+  )
+)
+
+(defwidget wify []
+  (box
+    :class 'wifiSec'
+    :orientation 'v'
+    :halign "center"
+    :valign "center"
+    :space-evenly false
+    :spacing -2
+    (literal :class "wifiIcon" :content wifi_icon)
+  )
+)
+
+
+
+(defwidget voly []
+  (box
+    :class 'batterySec'
+    :orientation 'v'
+    :halign "center"
+    :valign "center"
+    :space-evenly false
+    :spacing -2
+    (label :text "Vol")
+    (label :text volumePercent)
+    (progress :halign "center" :flipped true :value volumePercent :orientation "v")
+  )
+)
+
+(defwidget baty []
+    (box
+      :class 'batterySec'
+      :orientation 'v'
+      :halign "center"
+      :valign "center"
+      :space-evenly false
+      :spacing -2
+      (label :text 'Batt')
+      (label :text {batteryPercent.BAT1.capacity})
+      (progress :halign "center" :flipped true :value {batteryPercent.BAT1.capacity} :orientation "v")
+
+    )
+)
+
+(defwidget tray []
+  (box
+      :class "tray"
+      :orientation "v"
+      :valign "end"
+    (systray :orientation "v"
+              :icon-size 20
+              :spacing 5)
+  ))
+

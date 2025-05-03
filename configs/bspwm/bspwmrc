@@ -9,7 +9,7 @@ bspc config window_gap   5
 bspc config top_padding  5
 bspc config bottom_padding  5
 bspc config left_padding  5
-bspc config right_padding  68
+bspc config right_padding  55
 
 bspc config split_ratio          0.50
 bspc config borderless_monocle   true
@@ -30,11 +30,12 @@ bspc rule -a *:*:Picture-in-Picture state=floating layer=above sticky=on
 bspc rule -a kalk state=floating
 bspc rule -a zenity state=floating
 
-sh ~/.config/bspwm/autostart &
 
+/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 nm-applet &
 dunst &
-/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 xset -dpms s off &
 nitrogen --restore &
+
+sh ~/.config/bspwm/autostart &
 

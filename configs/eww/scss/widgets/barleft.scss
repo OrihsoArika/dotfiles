@@ -1,0 +1,104 @@
+.bar {
+  color: $fg0;
+  background-color: $bg0;
+
+  .powermenuButton {
+    font-size: 1.5rem;
+    border-radius: 10px;
+    background-color: $bg1;
+    margin: 5px 5px 0px 5px;
+    padding: 10px 0px 10px 0px;
+    padding-right: 5px;
+    button:hover {
+      color: #cc241d;
+    }
+  }
+
+  .workspaces {
+    font-size: 1.25rem;
+    background-color: $bg1;
+    border-radius: 10px;
+    margin: 5px 5px 0px 5px;
+    padding: 10px 0px 10px 0px;
+    padding-left: 3px;
+
+    button:hover {
+      color: $med_aqua;
+    }
+
+    .ws-icon {
+      color: $bg0;
+      margin: 0px;
+    }
+
+    .ws-icon-current {
+      color: $fg0;
+      margin: 0px;
+    }
+
+    .ws-icon-busy {
+      color: $fg0;
+      margin: 0px;
+    }
+
+  }
+
+  .tray {
+    background-color: $bg1;
+    margin: 5px;
+    padding: 10px 0px 10px 0px;
+    border-radius: 10px;
+  }
+
+  .clock {
+    background-color: $bg1;
+    margin: 5px 5px 0px 5px;
+    padding: 10px 0px 10px 0px;
+    border-radius: 10px;
+    font-size: 16px;
+  }
+}
+
+.wifiIcon {
+  margin: 0px 0px 0px 5px;
+  font-size: 1.5rem;
+
+  .wifi_connected{
+    color: $fg0;
+  }
+  .wifi_disconnected{
+    color: #cc241d;
+  }
+  .wifi_unavaliable{
+    color: $bg1;
+  }
+  .wifi_connecting {
+    color: #458588;
+  }
+}
+
+.sysinfo {
+  background-color: $bg1;
+  margin: 5px 5px 0px 5px;
+  padding: 5px 0px 5px 0px;
+  border-radius: 10px;
+
+
+  .batterySec {
+    border-radius: 10px;
+
+    progressbar trough {
+      min-height: 60px;
+      margin: 5px 0px 2px 0px;
+      min-width: 30px;
+      background: $bg0;
+      border-radius: 10px;
+    }
+
+    progressbar trough progress {
+      background: $med_aqua;
+      border-radius: 10px;
+      min-width: 30px;
+    }
+  }
+}

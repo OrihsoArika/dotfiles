@@ -1,0 +1,4 @@
+(include "./widgets/_variables.yuck")
+(include "./widgets/barleft.yuck")
+(include "./widgets/powermenu.yuck")
+

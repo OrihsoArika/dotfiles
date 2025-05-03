@@ -1,0 +1,20 @@
+(defwindow powermenu
+  :monitor 0
+  :stacking "fg"
+  :windowtype "normal"
+  :wm-ignore true
+  :geometry (geometry
+    :width "300px"
+    :height "250px"
+    :x "-55px"
+    :y "5px"
+    :anchor "right top")
+  (powermenu_layout)
+)
+
+(defwidget powermenu_layout []
+  (box :class "powermenu_layout"
+    (label :text "xz")
+    (label :text "zzz")
+  )
+)

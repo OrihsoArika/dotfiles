@@ -1,0 +1,6 @@
+#!/bin/sh
+
+open(){
+  
+}
+open

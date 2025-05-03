@@ -1,17 +1,13 @@
 #!/bin/sh
 
-export CURR_WM="bspwm"
-
-killall -9 picom 
-killall -9 polybar 
-
 eww kill &
 
 redshift -x 
 
 killall -9 redshift
 
-while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
+killall picom 
+
 while pgrep -u $UID -x picom >/dev/null; do sleep 1; done
 while pgrep -u $UID -x eww >/dev/null; do sleep 1; done
 while pgrep -u $UID -x redshift >/dev/null; do sleep 1; done
@@ -23,7 +19,6 @@ redshift &
 otd-daemon &
 
 eww daemon &
-
-sleep 0.3
-eww open barleft &
+# sleep 0.3
+eww open barleft1 &
 # polybar -r root | tee /tmp/polybar.log & disown 
