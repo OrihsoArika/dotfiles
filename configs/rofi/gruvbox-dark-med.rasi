@@ -26,8 +26,8 @@
 }
 
 window {
-    height: 600;
-    width: 600;
+    height: 400;
+    width: 400;
     
     border: 0 1 4 1;
     border-radius: 12;
@@ -118,7 +118,7 @@ element.selected.urgent {
 }
 
 element-text, element-icon {
-    size: 32;
+    size: 28;
     margin: 0 10 0 0;
     vertical-align: 0.5;
     horizontal-align: 0.5;

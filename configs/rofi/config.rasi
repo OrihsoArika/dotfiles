@@ -1,16 +1,18 @@
 configuration {
-    show-icons: true;
-    font: "Lexend 11";
-    icon-theme: "Gruvbox Plus Dark";
+    // show-icons: true;
+    font: "FantasqueSansM Nerd Font 10";
+    // icon-theme: "Gruvbox Plus Dark";
 
-    display-ssh:    "󰣀  SSH:";
-    display-run:    "󱓞  Run:";
-    display-drun:   "󰣖  Apps:";
-    display-window: "󱂬  Window:";
-    display-combi:  "󰕘  Combi:";
-    display-filebrowser: "󰉋  Filebrowser:";
+    display-ssh:    "󰣀  SSH";
+    display-run:    "󱓞  Run";
+    display-drun:   "󰣖  Apps";
+    display-window: "󱂬  Window";
+    display-combi:  "󰕘  Combi";
+    display-filebrowser: "󰉋  Filebrowser";
 
-    //dpi: 112;
+    dpi: 96;
 }
 
-@theme "gruvbox-dark-med"
+//@theme "gruvbox-dark-med"
+
+@theme "/usr/share/rofi/themes/gruvbox-dark.rasi"

@@ -2,8 +2,12 @@
   all: unset; //Unsets everything so you can style everything from scratch
 }
 
+@import "./scss/colors.scss";
 @import "./scss/variables.scss";
 
 @import "./scss/widgets/barleft.scss";
+@import "./scss/widgets/clock_hover.scss";
+@import "./scss/widgets/main_screen.scss";
 @import "./scss/widgets/powermenu.scss";
+@import "./scss/widgets/screen_borders.scss";
 

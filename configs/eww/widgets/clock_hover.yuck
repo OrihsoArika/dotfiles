@@ -1,0 +1,25 @@
+(defwindow clock_hover
+  :monitor 0
+  :stacking "fg"
+  :wm-ignore true
+  :windowtype "normal"
+  :geometry (geometry
+    :width "150px"
+    :height "100px"
+    :x "-60px"
+    :y "0px"
+    :anchor "right center")
+  (clock_hover_container) 
+)
+
+(defwidget clock_hover_container []
+  (box :class "clock_hover_container" :orientation "h" :space-evenly true
+    (button :onclick "eww c clock_hover" (xd))
+  )
+)
+(defwidget xd []
+  (box :orientation "v" :space-evenly false :valign "center"
+    (label :text `${time.hour}:${time.minute}`)
+    (label :text `${time.weekday} ${time.monthname} ${time.day} ${time.year}`)
+  )
+)

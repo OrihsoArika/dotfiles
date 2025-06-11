@@ -1,21 +1,24 @@
 #!/bin/sh
 
-barleft_close() {
-  WIDGETS=$(eww active-windows)
-  for widget in $WIDGETS; do
-    if [ $widget = "barleft" ] ; then
-      eww close barleft
+WIDGET_ARG=$1
+
+close_widgets() {
+  OPEN_WIDGETS=$(eww active-windows | awk '{print "$2"}')
+  for widget in $OPEN_WIDGETS; do
+    if [ $widget = "barleft1" ] ; then
+      eww close barleft1
     fi
   done
 }
-barleft_open(){
-  WIDGETS=$(eww active-windows)
-  for widget in $WIDGETS; do
-    if [ ! $(echo $widget | awk '{print "$2"}') = "barleft" ] ; then
-      eww open barleft
+open_widgets(){
+  OPEN_WIDGETS=$(eww active-windows | awk '{print "$2"}')
+  for widget in $OPEN_WIDGETS; do
+    if [ ! $widget = "barleft1" ] ; then
+      eww open barleft1
     fi
   done
 }
+
 bspc subscribe node_state | while read -r Event
 do
   Monitor=$(echo $Event | awk '{print $2}')
@@ -28,10 +31,10 @@ do
   if [ "$State" = "fullscreen" ]; then
     if [ "$Active" = "on" ]; then
       if [ "$(bspc query -M -m primary)" = $Monitor ]; then
-        barleft_close
+        close_widgets
       fi
     else
-      barleft_open
+      open_widgets
     fi
   fi
 done

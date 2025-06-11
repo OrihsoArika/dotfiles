@@ -1,4 +1,4 @@
-(deflisten workspaces "scripts/get_bspwm_workspases.sh")
+(deflisten workspaces "scripts/get_awesome_workspases.sh")
 
 (defpoll wifi_icon :interval "1s" "scripts/get_wifi.sh")
 ;(defpoll workspace :interval "10s" "scripts/get_hyprland_workspases")
@@ -8,5 +8,6 @@
 (defpoll volumePercent :interval "2s" "pamixer --get-volume")
 
 (defpoll time :interval "10s"
-  `date +'{"hour":"%H","minute":"%M"}'`)
+  `date +'{"hour":"%H","minute":"%M", "day":"%d", "weekday":"%a", "monthname":"%b","month":"%m","year":"%Y"}'`)
+
 

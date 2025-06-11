@@ -1,4 +1,7 @@
 (include "./widgets/_variables.yuck")
 (include "./widgets/barleft.yuck")
 (include "./widgets/powermenu.yuck")
+(include "./widgets/clock_hover.yuck")
+(include "./widgets/screen_borders.yuck")
+(include "./widgets/main_screen.yuck")
 

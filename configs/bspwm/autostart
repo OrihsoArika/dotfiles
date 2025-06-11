@@ -1,24 +1,22 @@
 #!/bin/sh
 
-eww kill &
+setxkbmap -variant "colemak" &
 
 redshift -x 
-
 killall -9 redshift
-
+eww kill &
 killall picom 
 
 while pgrep -u $UID -x picom >/dev/null; do sleep 1; done
-while pgrep -u $UID -x eww >/dev/null; do sleep 1; done
-while pgrep -u $UID -x redshift >/dev/null; do sleep 1; done
-
 picom &
 
-redshift &
+while pgrep -u $UID -x eww >/dev/null; do sleep 1; done
+eww open barleft1 &
 
 otd-daemon &
 
-eww daemon &
 # sleep 0.3
-eww open barleft1 &
 # polybar -r root | tee /tmp/polybar.log & disown 
+
+while pgrep -u $UID -x redshift >/dev/null; do sleep 1; done
+redshift &

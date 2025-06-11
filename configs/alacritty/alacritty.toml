@@ -20,12 +20,12 @@ class = { instance = "Alacritty", general = "Alacritty" }
 decorations_theme_variant = "None"
 
 [window.dimensions]
-columns = 120
-lines = 40
+columns = 80 
+lines = 24
 
 [window.padding]
-x = 32
-y = 32
+x = 8
+y = 8
 
 [scrolling]
 history = 10000
@@ -33,7 +33,8 @@ multiplier = 3
 
 [bell]
 animation = "Linear"
-duration = 500
+duration = 300
+color = "#888888"
 command = { program = "paplay", args = ["/usr/share/sounds/freedesktop/stereo/dialog-error.oga"] }
 
 [selection]
@@ -66,7 +67,7 @@ regex           = "(ipfs:|ipns:|magnet:|mailto:|gemini://|gopher://|https://|htt
 render_timer = false
 persistent_logging = false
 log_level = "Warn"
-renderer = "None"
+renderer = "Gles2"
 print_events = false
 highlight_damage = false
-prefer_egl = true
+prefer_egl = false

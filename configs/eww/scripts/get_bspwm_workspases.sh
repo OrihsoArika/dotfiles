@@ -14,18 +14,19 @@ workspaces() {
       ICON=" "
       CLASS="ws-icon-current"
     elif [ ${BUSY_WORKSPACES} == $WS ]; then
-      ICON=" "
+      ICON="$WS  "
       CLASS="ws-icon-busy"
     else
-      ICON=" "
+      ICON="$WS  "
       CLASS="ws-icon"
     fi
+
     COMMAND="$COMMAND (button :onclick \"bspc desktop -f $WS\" :class \"$CLASS\"\"$ICON\") "
   done
   echo "$COMMAND )"
 }
   
 workspaces
-bspc subscribe all | while read -r _ ; do
+bspc subscribe desktop | while read -r _ ; do
 workspaces
 done

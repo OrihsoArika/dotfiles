@@ -1,0 +1,31 @@
+(defwindow bordesitos
+  :monitor 0
+  :staking "bg"
+  :wm-ignore false
+  :windowtype "desktop"
+  :geometry (geometry
+  :x "0px"
+  :y "0px"
+  :widht "600px"
+  :height "600px"
+  :anchor "center"
+  )
+  (bordesitosCaja)
+)
+
+(defwidget bordesitosCaja []
+  (box
+    :orientation "h"
+    :space-evenly true
+    (box
+      :class "bordesitosCaja1"
+      (image
+        :image-height 1004
+        :class "bordesitosCaja2"
+        :path "/home/oshiro/dotfiles/wallpapers/futurism.jpg"
+        :preserve-aspect-ratio true
+      )
+    )
+  )
+)
+

@@ -1,0 +1,47 @@
+(defwindow main_screen
+  :monitor 0
+  :wm-ignore false
+  :stacking "bg"
+  :windowtype 'desktop'
+  :geometry (
+    geometry
+    :x "0px"
+    :y "0px"
+    :width "100%"
+    :height "100%"
+    :anchor "center"
+  )
+  (main_contaiter)
+)
+
+(defwidget main_contaiter []
+  (box
+    :class "main_contaiter"
+    :space-evenly true
+    :orientation "h"
+    (child_contaiter_1)
+  )
+)
+(defwidget child_contaiter_1 []
+  (box
+    :class "child_contaiter_1"
+    :space-evenly false
+    :valign "center"
+    :halign "center"
+    :spacing 10
+    :orientation "v"
+    (greeting)
+  )
+)
+(defwidget greeting []
+  (box
+    :class "greeting"
+    :space-evenly false
+    :valign "center"
+    :halign "center"
+    :spacing 10
+    :orientation "v"
+    (label :text "Hi Oshiro")
+    (label :text "${time.hour} ${time.minute}")
+  )
+)

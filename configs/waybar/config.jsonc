@@ -6,8 +6,7 @@
     "height": 32,// Waybar height (to be removed for auto height)
     "spacing": 8, // Gaps between modules (4px)
     "ipc": true,
-    "width": 1346,
-    "margin-top": 5,
+    "width": "100%",
     "reload_style_on_change": true,
     // Choose the order of the modules
     "modules-left": [

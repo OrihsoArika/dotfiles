@@ -5,11 +5,12 @@
   :windowtype "normal"
   :exclusive true
   :geometry (geometry
-    :width "50px"
-    :height "100%"
+    :width "44px"
+  :height "100%"
     :x "0px"
     :y "0px"
-    :anchor "right center")
+    :anchor "right center"
+  )
   (bar) 
 )
 (defwidget bar []
@@ -40,10 +41,11 @@
   ))
 
 (defwidget bottom []
-(box :class "bottom" :orientation "v" :valign "end" :halign "false" :space-evenly false
-  (sysinfo)
-  (tray)
-  ))
+  (box :class "bottom" :orientation "v" :valign "end" :halign "false" :space-evenly false
+    (sysinfo)
+    (tray)
+  )
+)
 
 ;(defwidget workspaces []
 ;    (literal :class "workspace" :content workspace))
@@ -60,14 +62,17 @@
 )
 
 (defwidget clock []
+  (button :onclick "scripts/openclose_widgets.sh clock_hover" (dd))
+
+)
+(defwidget dd []
   (box
     :class "clock"
     :orientation "v"
     :valign "center"
     :halign "false"
-    :spacing 3
-  (label :text {time.hour})
-  (label :text {time.minute})
+    (label :text {time.hour})
+    (label :text {time.minute})
   )
 )
 
@@ -90,7 +95,7 @@
     :halign "center"
     :valign "center"
     :space-evenly false
-    :spacing -2
+    :spacing 0
     (literal :class "wifiIcon" :content wifi_icon)
   )
 )
@@ -112,27 +117,29 @@
 )
 
 (defwidget baty []
-    (box
-      :class 'batterySec'
-      :orientation 'v'
-      :halign "center"
-      :valign "center"
-      :space-evenly false
-      :spacing -2
-      (label :text 'Batt')
-      (label :text {batteryPercent.BAT1.capacity})
-      (progress :halign "center" :flipped true :value {batteryPercent.BAT1.capacity} :orientation "v")
-
-    )
+  (box
+    :class 'batterySec'
+    :orientation 'v'
+    :halign "center"
+    :valign "center"
+    :space-evenly false
+    :spacing -2
+    (label :text 'Batt')
+    (label :text {batteryPercent.BAT0.capacity})
+    (progress :halign "center" :flipped true :value {batteryPercent.BAT0.capacity} :orientation "v")
+  )
 )
 
 (defwidget tray []
   (box
-      :class "tray"
+    :class "tray"
+    :orientation "v"
+    :valign "end"
+    (systray
       :orientation "v"
-      :valign "end"
-    (systray :orientation "v"
-              :icon-size 20
-              :spacing 5)
-  ))
+      :icon-size 20
+      :spacing 5
+    )
+  )
+)
 
