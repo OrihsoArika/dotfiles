@@ -26,20 +26,19 @@
 }
 
 window {
-    height: 400;
-    width: 400;
+    height: 420;
+    width: 350;
     
-    border: 0 1 4 1;
+    border: 2 2 6 2;
     border-radius: 12;
-    border-color: #1d2021;
+    border-color: @bg1;
 
     background-color: @bg3;
 }
 mainbox {
     spacing: 0;
-    children: [inputbar, message, listview]; border: 2 0 0 0 ;
+    children: [inputbar, message, listview];
     border-radius: 12;
-    border-color: @bg1;
 }
 
 inputbar {
@@ -58,7 +57,7 @@ message {
 listview {
     padding: 8;
     
-    border-radius: 12;
+    border-radius: 20;
     border: 0 ;
     border-color: @orange;
 
@@ -87,9 +86,9 @@ prompt {
 }
 
 element {
-    padding: 5;
+    padding: 8 15;
     vertical-align: 0.5;
-    border-radius: 12;
+    border-radius: 20;
     background-color: @bg1;
 }
 

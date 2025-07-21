@@ -1,0 +1,24 @@
+[cursor]
+color = #8F9EAE #DBE4EC
+
+[colors]
+foreground = #DBE4EC
+background = #1B1C1F
+
+regular0 = #424346
+regular1 = #222C38
+regular2 = #314253
+regular3 = #34424E
+regular4 = #475965
+regular5 = #4A5E69
+regular6 = #738697
+regular7 = #C4D1DC
+
+bright0 = #89929A
+bright1 = #2D3A4B
+bright2 = #42586F
+bright3 = #455968
+bright4 = #5E7786
+bright5 = #637D8C
+bright6 = #99B3C9
+bright7 = #C4D1DC

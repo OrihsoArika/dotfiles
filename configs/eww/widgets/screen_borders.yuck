@@ -17,10 +17,10 @@
   (box
     :orientation "h"
     :space-evenly true
+    :class "bordesitosCaja1"
     (box
-      :class "bordesitosCaja1"
       (image
-        :image-height 1004
+        :image-height 905
         :class "bordesitosCaja2"
         :path "/home/oshiro/dotfiles/wallpapers/futurism.jpg"
         :preserve-aspect-ratio true

@@ -1,0 +1,27 @@
+# Kanagawa Lotus Foot Colors
+# Source https//github.com/rebelot/kanagawa.nvim
+[cursor]
+color =  181818 d8d8d8
+
+[colors]
+background = 181818
+foreground = d8d8d8
+
+regular0 = 181818
+regular1 = ab4642
+regular2 = a1b56c
+regular3 = f7ca88
+regular4 = 7cafc2
+regular5 = ba8baf
+regular6 = 86c1b9
+regular7 = d8d8d8
+
+bright0 = 585858
+bright1 = ab4642
+bright2 = a1b56c
+bright3 = f7ca88
+bright4 = 7cafc2
+bright5 = ba8baf
+bright6 = 86c1b9
+bright7 = f8f8f8
+

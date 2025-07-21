@@ -1,13 +1,13 @@
 (defwindow barleft1
   :monitor 0
-  :stacking "bg"
-  :wm-ignore true
-  :windowtype "normal"
+  :stacking "overlay"
+  :wm-ignore false
+  :windowtype "dock"
   :exclusive true
   :geometry (geometry
-    :width "44px"
-  :height "100%"
-    :x "0px"
+    :width "49px"
+    :height "100%"
+    :x "5px"
     :y "0px"
     :anchor "right center"
   )
@@ -125,8 +125,8 @@
     :space-evenly false
     :spacing -2
     (label :text 'Batt')
-    (label :text {batteryPercent.BAT0.capacity})
-    (progress :halign "center" :flipped true :value {batteryPercent.BAT0.capacity} :orientation "v")
+    (label :text {batteryPercent.BAT1.capacity})
+    (progress :halign "center" :flipped true :value {batteryPercent.BAT1.capacity} :orientation "v")
   )
 )
 

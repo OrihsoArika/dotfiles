@@ -8,15 +8,13 @@
 
 * {
     // BG variants
-    bg0h: #f9f5d7;
-    bg0: #f2e5bc;
-    bg0m:#ebdbb2;
-    bg1: #d5c4a1;
+    bg0: #282828;
+    bg1: #3c3836;
 
-    bg3: #a89984;
+    bg3: #504945;
 
     //foreground
-    fg0: #32302f;
+    fg0: #ebdbb2;
 
     // Normal colors
     blue: #458588;
@@ -28,29 +26,27 @@
 }
 
 window {
-    height: 570;
-    width: 570;
+    height: 747;
+    width: 350;
+    
+    border: 2 2 6 2;
+    border-radius: 20;
+    border-color: @bg1;
 
-    border: 0 0 3 0;
-    border-radius: 12;
-
-    border-color: @bg3;
     background-color: @bg3;
 }
 mainbox {
     spacing: 0;
     children: [inputbar, message, listview];
+    border-radius: 12;
 }
 
 inputbar {
     color: @fg0;
     
     padding: 14; //similar to a height function (in this case)
+    border-radius: 12;
     
-    border-radius: 0 12 0 0;
-    border: 2 0 0 0;
-    border-color: @bg0h;
-
     background-color: @bg0;
 }
 message {
@@ -59,14 +55,9 @@ message {
 }
 
 listview {
-    margin: 8 8 8 8;
     padding: 8;
     
-    border-radius: 12;
-    border: 1 ;
-    border-color: @bg3;
-
-    background-color: @bg0m;
+    background-color: @bg0;
     
     dynamic: true;
     
@@ -82,13 +73,8 @@ error-message {
     border: 20 20 20 20;
 }
 
-prompt, case-indicator {
+entry, prompt, case-indicator {
     text-color: inherit;
-}
-
-entry {
-    text-color: inherit;
-
 }
 
 prompt {
@@ -96,9 +82,9 @@ prompt {
 }
 
 element {
-    padding: 3;
+    padding: 8 15;
     vertical-align: 0.5;
-    border-radius: 12;
+    border-radius: 40;
     background-color: @bg1;
 }
 
@@ -107,7 +93,7 @@ element.selected.normal {
 }
 
 element.alternate.normal {
-    background-color: @bg0m;
+    background-color: @bg0;
 }
 
 element.normal.active, element.alternate.active {
@@ -127,9 +113,10 @@ element.selected.urgent {
 }
 
 element-text, element-icon {
-    size: 32;
+    size: 28;
     margin: 0 10 0 0;
     vertical-align: 0.5;
+    // horizontal-align: 0.5;
     background-color: inherit;
     text-color: @fg0;
 }

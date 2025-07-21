@@ -1,6 +1,6 @@
 configuration {
     // show-icons: true;
-    font: "FantasqueSansM Nerd Font 10";
+  font: "FantasqueSansM Nerd Font 10";
     // icon-theme: "Gruvbox Plus Dark";
 
     display-ssh:    "󰣀  SSH";
@@ -13,6 +13,6 @@ configuration {
     dpi: 96;
 }
 
-//@theme "gruvbox-dark-med"
+@theme "gruvbox-dark-med"
 
-@theme "/usr/share/rofi/themes/gruvbox-dark.rasi"
+// @theme "/usr/share/rofi/themes/gruvbox-dark.rasi"

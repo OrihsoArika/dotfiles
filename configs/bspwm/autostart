@@ -1,7 +1,5 @@
 #!/bin/sh
 
-setxkbmap -variant "colemak" &
-
 redshift -x 
 killall -9 redshift
 eww kill &

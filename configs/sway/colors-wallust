@@ -1,0 +1,21 @@
+set $bg      #1B1C1F
+set $fg      #DBE4EC
+set $cursor  #8F9EAE
+
+set $color0  #424346
+set $color1  #222C38
+set $color2  #314253
+set $color3  #34424E
+set $color4  #475965
+set $color5  #4A5E69
+set $color6  #738697
+set $color7  #C4D1DC
+
+set $color8 #89929A
+set $color9 #2D3A4B
+set $color10 #42586F
+set $color11 #455968
+set $color12 #5E7786
+set $color13 #637D8C
+set $color14 #99B3C9
+set $color15 #C4D1DC

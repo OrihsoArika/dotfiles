@@ -4,16 +4,16 @@ size = 10
 builtin_box_drawing = true
 
 [font.normal]
-family = "FantasqueSansM Nerd Font"
+family = "GeistMono Nerd Font"
 
 [font.bold]
-family = "FantasqueSansM Nerd Font"
+family = "GeistMono Nerd Font"
 
 [font.italic]
-family = "FantasqueSansM Nerd Font"
+family = "GeistMono Nerd Font"
 
 [font.bold_italic]
-family = "FantasqueSansM Nerd Font"
+family = "GeistMono Nerd Font"
 
 [font.offset]
 x = 0

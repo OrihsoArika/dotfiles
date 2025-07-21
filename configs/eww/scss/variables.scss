@@ -1,35 +1,80 @@
-$bg0:    #2D353B;
-$bg1:    #343F44;
-$bg2:    #3D484D;
-$bg3:    #475258;
-$bg4:    #4F585E;
-$bg5:    #56635f;
-$grey0:  #7A8478;
-$grey1:  #859289;
-$grey2:  #9DA9A0;
-$fg0:    #D3C6AA;
+$bg0_h: #1d2021;
+$bg0:   #282828;
+$bg0_s: #32302f;
+$bg1:   #3c3836;
+$bg2:   #504945;
+$bg3:   #665c54;
+$bg4:   #7c6f64;
+$grey:  #928374;
+$fg4:   #a89984;
+$fg3:   #bdae93;
+$fg2:   #d5c4a1;
+$fg1:   #ebdbb2;
+$fg0:   #fbf1c7;
 
-$bg-visual: #543A48;
+$bg: $bg0;
+$fg: $fg1;
 
-$bg-red:    #514045;
-$bg-yellow: #4D4C43;
-$bg-green:  #425047;
-$bg-blue:   #3A515D;
+$mix_red:    #f2594b;
+$mix_orange: #f28534;
+$mix_yellow: #e9b143;
+$mix_green:  #b0b846;
+$mix_aqua:   #8bba7f;
+$mix_blue:   #80aa9e;
+$mix_purple: #d3869b;
 
-$red:       #E67E80;
-$orange:    #E69875;
-$yellow:    #DBBC7F;
-$green:     #A7C080;
-$aqua:      #83C092;
-$blue:      #7FBBB3;
-$purple:    #D699B6;
+$bri_red:    #fb4934;
+$bri_orange: #fe8019;
+$bri_yellow: #fabd2f;
+$bri_green:  #b8bb26;
+$bri_aqua:   #8ec07c;
+$bri_blue:   #83a598;
+$bri_purple: #d3869b;
 
-$med_aqua: $fg0;
+$neu_red:    #cc241d;
+$neu_orange: #d65d0e;
+$neu_yellow: #d79921;
+$neu_green:  #98971a;
+$neu_aqua:   #689d6a;
+$neu_blue:   #458588;
+$neu_purple: #b16286;
 
-$symbols: "Symbols Nerd Font";
+$fad_red:    #9d0006;
+$fad_orange: #af3a03;
+$fad_yellow: #b57614;
+$fad_green:  #79740e;
+$fad_aqua:   #427b58;
+$fad_blue:   #076678;
+$fad_purple: #8f3f71;
 
-$font: "lexend";
+$symbols: "GeistMono Nerd Font";
+
+$font: "Lexend";
 $font-size: 10pt;
-$border-radius: 28px;
+$border-radius: 8px;
 
+// $bg0:    #2D353B;
+// $bg1:    #343F44;
+// $bg2:    #3D484D;
+// $bg3:    #475258;
+// $bg4:    #4F585E;
+// $bg5:    #56635f;
+// $grey0:  #7A8478;
+// $grey1:  #859289;
+// $grey2:  #9DA9A0;
+// $fg0:    #D3C6AA;
 
+// $bg-visual: #543A48;
+
+// $bg-red:    #514045;
+// $bg-yellow: #4D4C43;
+// $bg-green:  #425047;
+// $bg-blue:   #3A515D;
+
+// $red:       #E67E80;
+// $orange:    #E69875;
+// $yellow:    #DBBC7F;
+// $green:     #A7C080;
+// $aqua:      #83C092;
+// $blue:      #7FBBB3;
+// $purple:    #D699B6;
