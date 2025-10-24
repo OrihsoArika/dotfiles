@@ -37,7 +37,7 @@ exec --no-startup-id nm-applet
 
 exec_always --no-startup-id ~/.config/i3/autostart
 
-exec --no-startup-id xset r rate 300 50
+exec --no-startup-id nitrogen --restore
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
@@ -62,9 +62,9 @@ bindsym $mod+c kill
 bindcode $mod+40 exec "rofi -modi drun,run -show drun"
 # change focus
 bindsym $mod+h focus left
-bindsym $mod+n focus down
-bindsym $mod+l focus up
-bindsym $mod+e focus right
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
@@ -74,9 +74,9 @@ bindsym $mod+Right focus right
 
 # move focused window
 bindsym $mod+Shift+h move left
-bindsym $mod+Shift+n move down
-bindsym $mod+Shift+l move up
-bindsym $mod+Shift+e move right
+bindsym $mod+Shift+j move down
+bindsym $mod+Shift+k move up
+bindsym $mod+Shift+l move right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Shift+Left move left
@@ -85,18 +85,18 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
 # enter fullscreen mode for the focused container
-bindsym $mod+t fullscreen toggle
+bindsym $mod+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
-bindsym $mod+p layout stacking
+bindsym $mod+u layout stacking
 bindsym $mod+w layout tabbed
-bindsym $mod+f layout toggle split
+bindsym $mod+e layout toggle split
 
 # toggle tiling / floating
 bindsym $mod+v floating toggle
 
 # change focus between tiling / floating windows
-bindcode $mod+65 focus mode_toggle
+bindsym $mod+space focus mode_toggle
 
 # focus the parent container
 bindsym $mod+a focus parent
@@ -144,9 +144,9 @@ bindsym $mod+Shift+0 move container to workspace number $ws10
 # reload the configuration file
 bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
-bindsym $mod+Shift+r restart
+bindsym $mod+Mod1+r restart
 # exit i3 (logs you out of your X session)
-bindsym $mod+Shift+q exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
+bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -157,9 +157,9 @@ mode "resize" {
         # Pressing up will shrink the window’s height.
         # Pressing down will grow the window’s height.
         bindsym h resize shrink width 10 px or 10 ppt
-        bindsym n resize grow height 10 px or 10 ppt
-        bindsym l resize shrink height 10 px or 10 ppt
-        bindsym e resize grow width 10 px or 10 ppt
+        bindsym j resize grow height 10 px or 10 ppt
+        bindsym k resize shrink height 10 px or 10 ppt
+        bindsym l resize grow width 10 px or 10 ppt
 
         # same bindings, but for the arrow keys
         bindsym Left resize shrink width 10 px or 10 ppt
@@ -175,17 +175,17 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-# gaps outer 5
-# gaps inner 5
-# gaps bottom 37
+gaps outer 5
+gaps inner 5
+gaps bottom 37
 
-# default_border pixel 0
+default_border pixel 0
 
 # class                 border  backgr. text    indicator child_border
-client.focused          #a7c080 #a7c080 #2d353b
-client.focused_inactive #94aa73 #94aa73 #2d353b
-client.unfocused        #606f53 #606f53 #d3c6aa
-client.urgent           #e67e80 #e67e80 #2d353b
+client.focused          #4c7899 #285577 #ffffff #fb4934   #689d6a
+client.focused_inactive #1d2021 #5f676a #ffffff #484e50   #5f676a
+client.unfocused        #1d2021 #222222 #888888 #292d2e   #1d2021
+client.urgent           #2f343a #900000 #ffffff #900000   #cc241d
 client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
 
 client.background       #ffffff
