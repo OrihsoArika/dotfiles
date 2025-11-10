@@ -1,0 +1,7 @@
+[Bookmarks]
+[Recent]
+/home/oshiro/Documents/Blender stuff/
+/home/oshiro/Documents/Blender stuff/Video/
+/home/oshiro/.local/share/fonts/IosevkaTerm/
+/home/oshiro/.local/share/fonts/Geist/geist-font-1.5.1/fonts/Geist/variable/
+/home/oshiro/
