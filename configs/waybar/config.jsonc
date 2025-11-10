@@ -2,25 +2,24 @@
 {
     "fixed-center": true,
     //"layer": "top", // Waybar at top layer
-    "position": "top", // Waybar position (top|bottom|left|right)
-    "height": 32,// Waybar height (to be removed for auto height)
+    "position": "bottom", // Waybar position (top|bottom|left|right)
+    "height": 36,// Waybar height (to be removed for auto height)
     "spacing": 8, // Gaps between modules (4px)
     "ipc": true,
-    "width": "100%",
+    "width": "1300px",
     "reload_style_on_change": true,
     // Choose the order of the modules
     "modules-left": [
-      "hyprland/workspaces",
       "niri/workspaces"
     ],
     "modules-center": [
+        "clock"
     ],
     "modules-right": [
         "tray",
         "pulseaudio",
         "network",
-        "battery",
-        "clock"
+        "battery"
     ],
     "hyprland/workspaces": {
       "format": "{name}",
