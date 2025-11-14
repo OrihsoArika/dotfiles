@@ -1,4 +1,4 @@
-(defpoll workspaces :interval "1s" "scripts/get_sway_workspases.py")
+(defpoll workspaces :interval "1s" "scripts/get_bspwm_workspases.py")
 
 (defpoll wifi_icon :interval "1s" "scripts/get_wifi.sh")
 ;(defpoll workspace :interval "10s" "scripts/get_hyprland_workspases")

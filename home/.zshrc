@@ -71,7 +71,10 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(
+  git
+  starship
+)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -80,7 +83,7 @@ source $ZSH/oh-my-zsh.sh
 export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
-export LANG=en_GB.UTF-8
+export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
@@ -108,7 +111,9 @@ export ARCHFLAGS="-arch $(uname -m)"
 
 . "$HOME/.cargo/env"
 
-PATH="$PATH:$HOME/.local/bin"
+export DOTNET_ROOT=$HOME/.dotnet
+
+PATH="$PATH:$HOME/.local/bin:$HOME/.dotnet"
 
 oshiro_imgui() {
     TMUX_SESSION_NAME="sdl2-project"

@@ -3,7 +3,7 @@ super + Return
      alacritty
 
 # program launcher
-super + d
+super + s
 	rofi -show drun
 
 # make sxhkd reload its configuration files:
@@ -38,7 +38,7 @@ super + g
 #
 
 # set the window state
-super + {shift+ f,p,w,f}
+super + {t,semicolon,w,shift + t}
 	bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
 
 # set the node flags

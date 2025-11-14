@@ -7,7 +7,7 @@
   :geometry (geometry
     :width "49px"
     :height "100%"
-    :x "5px"
+    :x "0px"
     :y "0px"
     :anchor "right center"
   )

@@ -1,10 +1,10 @@
 [font]
-size = 12
+size = 11.25
 
 builtin_box_drawing = true
 
 [font.normal]
-family = "MonaspiceXe Nerd Font"
+family = "MonaspiceNe Nerd Font"
 
 [font.offset]
 x = 0
