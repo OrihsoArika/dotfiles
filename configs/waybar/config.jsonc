@@ -1,112 +1,78 @@
-// -*- mode: jsonc -*-
 {
-    "fixed-center": true,
-    //"layer": "top", // Waybar at top layer
-    "position": "bottom", // Waybar position (top|bottom|left|right)
-    "height": 36,// Waybar height (to be removed for auto height)
-    "spacing": 8, // Gaps between modules (4px)
-    "ipc": true,
-    "width": "1300px",
-    "reload_style_on_change": true,
-    // Choose the order of the modules
-    "modules-left": [
-      "niri/workspaces"
+    "layer": "top",
+    "spacing": 0,
+    "height": 0,
+
+    "margin-top": 0,
+    "margin-right": 0,
+    "margin-bottom": 0,
+    "margin-left": 0,
+
+    "modules-left":
+    [
+        "sway/workspaces"
     ],
-    "modules-center": [
+
+    "modules-center":
+    [
+    ],
+
+    "modules-right":
+    [
+        "tray",
+        "battery",
+        "network",
+        "pulseaudio",
         "clock"
     ],
-    "modules-right": [
-        "tray",
-        "pulseaudio",
-        "network",
-        "battery"
-    ],
-    "hyprland/workspaces": {
-      "format": "{name}",
-    	"format-icons": {
-    		"1": "",
-    		"2": "",
-    		"3": "",
-    		"4": "",
-    		"5": "",
-    		"active": "",
-    		"default": ""
-      },
-    	"persistent-workspaces": {
-    		"*": 10 
-      }
+
+    "sway/workspaces":
+    {
+        "disable-scroll": true,
+        "all-outputs": true,
+        "tooltip": false
     },
-    "hyprland/language": {
-	"format": "Lang: {long}",
-	"format-en": "AMERICA, HELL YEAH!",
-	"format-tr": "As bayrakları",
-	"keyboard-name": "at-translated-set-2-keyboard"
-},
-   "keyboard-state": {
-        "numlock": true,
-        "capslock": true,
-        "format": "{name} {icon}",
-        "format-icons": {
-            "locked": "",
-            "unlocked": ""
-        }
+
+    "tray":
+    {
+        "spacing": 10,
+        "tooltip": false
     },
-     "idle_inhibitor": {
-        "format": "{icon}",
-        "format-icons": {
-            "activated": "",
-            "deactivated": ""
-        }
-    },
-    "tray": {
-        "icon-size": 21,
-        "spacing": 12
-    },
-    "clock": {
-        // "timezone": "America/New_York",
-        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format-alt": "{:%Y-%m-%d}"
-    },
-    "battery": {
-        "bat": "BAT1",
-        "states": {
-            // "good": 95,
-            "warning": 30,
-            "critical": 15
+
+    "battery":
+    {
+        "format": "bat {capacity}%",
+        "interval": 5,
+        "states":
+        {
+            "warning": 20,
+            "critical": 10
         },
-        "format": "{capacity}% {icon}",
-        "format-full": "{capacity}% {icon}",
-        "format-charging": "{capacity}% ",
-        "format-plugged": "{capacity}% ",
-        "format-alt": "{time} {icon}",
-        // "format-good": "", // An empty format will hide the module
-        // "format-full": "",
-        "format-icons": ["", "", "", "", ""]
+        "tooltip": false
     },
-    "network": {
-        // "interface": "wlp2*", // (Optional) To force the use of this interface
-        "format-wifi": "{essid} ",
-        "format-ethernet": "{ipaddr}/{cidr} ",
-        "format-linked": "{ifname} (No IP) ",
-        "format-disconnected": "Disconnected ⚠"
+
+    "network":
+    {
+        "format-wifi" : "wifi up",
+        "format-ethernet": "ethernet up",
+        "format-disconnected" : "no network",
+        "tooltip": false
     },
-    "pulseaudio": {
-        // "scroll-step": 1, // %, can be a float
-        "format": "{volume}% {icon} {format_source}",
-        "format-bluetooth": "{volume}% {icon} {format_source}",
-        "format-bluetooth-muted": " {icon} {format_source}",
-        "format-muted": " {format_source}",
-        "format-source": "{volume}% ",
-        "format-source-muted": "",
-        "format-icons": {
-            "headphone": "",
-            "hands-free": "",
-            "headset": "",
-            "phone": "",
-            "portable": "",
-            "car": "",
-            "default": ["", "", ""]
-        },
-        "on-click": "pavucontrol"
+
+    "pulseaudio":
+    {
+        "scroll-step": 5,
+        "max-volume": 150,
+        "format": "vol {volume}%",
+        "format-bluetooth": "vol {volume}%",
+        "nospacing": 1,
+        "on-click": "pavucontrol",
+        "tooltip": false
+    },
+
+    "clock":
+    {
+        "format": "{:%a %d-%m-%Y %I:%M}",
+        "tooltip": false
     }
 }

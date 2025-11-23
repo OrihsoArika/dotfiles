@@ -129,4 +129,10 @@ oshiro_imgui() {
     fi
 }
 
+nvconf() {
+	NVIM_CONF_DIR="$HOME/.config/nvim"
+	cd $NVIM_CONF_DIR
+	nvim .
+}
+
 # alias oshiro_imgui="cd $HOME/projects/cpp/example_sdl2_sdlrenderer2"

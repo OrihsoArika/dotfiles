@@ -5,31 +5,25 @@ pgrep -x sxhkd > /dev/null || sxhkd &
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 dunst &
 xset -dpms s off &
-sh $HOME/.config/bspwm/autostart &
-sh $HOME/.fehbg &
+$HOME/.config/bspwm/autostart &
+nitrogen --restore &
 
 bspc monitor -d 1 2 3 4 5 6 7 8 9 10
 
-bspc config border_width 0
+bspc config border_width 2
 bspc config window_gap   10
-bspc config top_padding  10
-bspc config bottom_padding  10
-bspc config left_padding  10
-bspc config right_padding  54
+bspc config top_padding  5
+bspc config bottom_padding  5
+bspc config left_padding  5
+bspc config right_padding  56
 
-bspc config split_ratio          0.52
+bspc config split_ratio          0.50
 bspc config borderless_monocle   true
 bspc config gapless_monocle      true
 bspc config focus_follows_pointer true
-# bspc config normal_border_color "#282828"
-# bspc config active_border_color "#ebddb2"
-# bspc config focused_border_color "#ebddb2"
-. "${HOME}/.cache/wal/colors.sh"
-bspc config normal_border_color "$color1"
-bspc config active_border_color "$color2"
-bspc config focused_border_color "$color15"
-bspc config presel_feedback_color "$color1"
-bspc config presel_border_color "$color1"
+bspc config normal_border_color "#282828"
+bspc config active_border_color "#ebddb2"
+bspc config focused_border_color "#ebddb2"
 
 bspc rule -a Gimp desktop='^8' state=floating follow=on
 bspc rule -a Chromium desktop='^2'

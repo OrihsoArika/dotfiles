@@ -11,15 +11,13 @@
     :y "0px"
     :anchor "right center"
   )
-  (bar) 
-)
+  (bar))
+
 (defwidget bar []
   (centerbox :class "bar" :orientation "v" :valign "false" :halign "false" :space-evenly false
     (top)
     (center)
-    (bottom)
-  )
-)
+    (bottom)))
 
 (defwidget top []
   (box
@@ -28,8 +26,7 @@
     :halign "false"
     :space-evenly false
     (powermenuButton)
-    (workspaces)
-  ))
+    (workspaces)))
 
 (defwidget center []
   (box
@@ -37,15 +34,12 @@
     :valign "start"
     :halign "false"
     :space-evenly false
-    (clock)
-  ))
+    (clock)))
 
 (defwidget bottom []
   (box :class "bottom" :orientation "v" :valign "end" :halign "false" :space-evenly false
     (sysinfo)
-    (tray)
-  )
-)
+    (tray)))
 
 ;(defwidget workspaces []
 ;    (literal :class "workspace" :content workspace))
@@ -57,9 +51,7 @@
     :class "powermenuButton"
     :orientation "v"
     :space-evenly false
-    (button :onclick "notify-send xd" "")
-  )
-)
+    (button :onclick "notify-send xd" "")))
 
 (defwidget clock []
   (button :onclick "scripts/openclose_widgets.sh clock_hover" (dd))
@@ -72,9 +64,7 @@
     :valign "center"
     :halign "false"
     (label :text {time.hour})
-    (label :text {time.minute})
-  )
-)
+    (label :text {time.minute})))
 
 (defwidget sysinfo []
   (box
@@ -84,9 +74,7 @@
     :space-evenly false
     (voly)
     (wify)
-    (baty)
-  )
-)
+    (baty)))
 
 (defwidget wify []
   (box
@@ -96,11 +84,7 @@
     :valign "center"
     :space-evenly false
     :spacing 0
-    (literal :class "wifiIcon" :content wifi_icon)
-  )
-)
-
-
+    (literal :class "wifiIcon" :content wifi_icon)))
 
 (defwidget voly []
   (box
@@ -112,9 +96,7 @@
     :spacing -2
     (label :text "Vol")
     (label :text volumePercent)
-    (progress :halign "center" :flipped true :value volumePercent :orientation "v")
-  )
-)
+    (progress :halign "center" :flipped true :value volumePercent :orientation "v")))
 
 (defwidget baty []
   (box
@@ -125,10 +107,8 @@
     :space-evenly false
     :spacing -2
     (label :text 'Batt')
-    (label :text {batteryPercent.BAT1.capacity})
-    (progress :halign "center" :flipped true :value {batteryPercent.BAT1.capacity} :orientation "v")
-  )
-)
+    (label :text {EWW_BATTERY.BAT1.capacity})
+    (progress :halign "center" :flipped true :value {EWW_BATTERY.BAT1.capacity} :orientation "v")))
 
 (defwidget tray []
   (box
@@ -138,8 +118,5 @@
     (systray
       :orientation "v"
       :icon-size 20
-      :spacing 5
-    )
-  )
-)
+      :spacing 5)))
 

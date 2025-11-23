@@ -1,178 +1,52 @@
-* {
-    /* `otf-font-awesome` is required to be installed for icons */
-    font-family: IosevkaTerm NF, Lexend;
-    font-size: 13px;
-    border-radius: 40pt;
-    padding: 0px;
-}
-
-window#waybar {
-    border-radius: 0px;
-    
-    background-color: #282828;
-    color: #ebddb2;
-    transition-property: background-color;
-    transition-duration: .3s;
-}
-
-button {
-    /* Use box-shadow instead of border so the text isn't offset */
-    /* box-shadow: inset 0 -3px transparent; */
-    /* Avoid rounded borders under each button name */
-    border: 2;
-}
-
-/* you can set a style on hover for any module like this */
-#pulseaudio:hover {
-    background-color: #a37800;
-}
-
-#workspaces button {
-    padding: 0 5px;
-    background-color: transparent;
-    color: #ebddb2;
-}
-#workspaces button:hover {
-    background: rgba(104, 157, 106, 0.6);
-}
-
-#workspaces button.urgent {
-    padding: 0 10px;
-    background-color: #cc241d;
-    box-shadow: inset 0 -3px #9d0006;
-}
-
-#clock,
-#battery,
-#cpu,
-#memory,
-#disk,
-#temperature,
-#backlight,
-#network,
-#pulseaudio,
-#wireplumber,
-#custom-media,
-#tray 
-#mode,
-#idle_inhibitor,
-#scratchpad,
-#power-profiles-daemon,
-#mpd {
-    padding: 0 10px;
-    color: #ffffff;
-}
-
-#clock {
-    background-color: #64727D;
-}
-
-#battery {
-    background-color: #ebddb2;
-    color: #282828;
-}
-
-#battery.charging, #battery.plugged {
-    color: #ebddb2;
-    background-color: #26A65B;
-}
-
-@keyframes blink {
-    to {
-        background-color: #ffffff;
-        color: #000000;
-    }
-}
-
-/* Using steps() instead of linear as a timing function to limit cpu usage */
-#battery.critical:not(.charging) {
-    background-color: #f53c3c;
-    color: #ffffff;
-    animation-name: blink;
-    animation-duration: 0.5s;
-    animation-timing-function: steps(12);
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-}
-
-label:focus {
-    background-color: #000000;
-}
-
-#network {
-    background-color: #83a598;
-    color: #282828;
-}
-
-#network.disconnected {
-    background-color: #f53c3c;
-}
-
-#pulseaudio {
-    background-color: #f1c40f;
-    color: #000000;
-}
-
-#pulseaudio.muted {
-    background-color: #90b1b1;
-    color: #2a5c45;
-}
-
-#tray {
-    padding: 0 8 0 0;
-    background-color: transparent;
-}
-
-#tray > .passive {
-    -gtk-icon-effect: dim;
-}
-
-#tray > .needs-attention {
-    -gtk-icon-effect: highlight;
-    background-color: #eb4d4b;
-}
-
-#language {
-    background: #00b093;
-    color: #740864;
-    padding: 0 5px;
-    margin: 0 5px;
-    min-width: 16px;
-}
-
-#keyboard-state {
-    background: #97e1ad;
-    color: #000000;
-    padding: 0 0px;
-    margin: 0 5px;
-    min-width: 16px;
-}
-
-#keyboard-state > label {
-    padding: 0 5px;
-}
-
-#keyboard-state > label.locked {
-    background: rgba(0, 0, 0, 0.2);
-}
-
-#privacy {
+*
+{
+    border: none;
+    border-radius: 0;
+    min-height: 0;
+    font-family: "Iosevka NF";
+    font-weight: bold;
+    font-size: 14px;
     padding: 0;
 }
 
-#privacy-item {
-    padding: 0 5px;
-    color: white;
+window#waybar
+{
+    background: #d5c4a1;
+    border-bottom: 2px solid #150f05;
 }
 
-#privacy-item.screenshare {
-    background-color: #cf5700;
+#clock, #pulseaudio, #network, #tray, #battery
+{
+    margin: 6px 6px 8px 0px;
+    padding: 2px 8px;
+    color: #150f05;
+    background-color: #bcab85;
+    border: 2px solid #4a3c25;
 }
 
-#privacy-item.audio-in {
-    background-color: #1ca000;
+#workspaces
+{
+    padding: 2px 0px 2px 10px;
+    margin: 6px 6px 8px 8px;
 }
 
-#privacy-item.audio-out {
-    background-color: #0069d4;
+#workspaces button
+{
+    all: initial;
+    padding: 2px 12px 2px 0px;
+    color: #695a40;
+}
+
+#workspaces button.focused
+{
+    color: #150f05;
+}
+
+#workspaces button.urgent,
+#battery.warning, #battery.critical, #battery.urgent
+{
+    background-color: #2e2412;
+    border: 2px solid #695a40;
+    padding: 2px 8px;
+    color: #bcab85;
 }

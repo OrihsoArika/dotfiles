@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 workspaces() {
   COMMAND="(box	:class \"works\"	:orientation \"v\" :spacing 4 :space-evenly \"false\""

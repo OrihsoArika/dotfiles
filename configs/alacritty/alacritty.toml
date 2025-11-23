@@ -1,5 +1,5 @@
 [general]
-import = ["~/.config/alacritty/colorschemes/gruvbox_dark.toml", "~/.config/alacritty/fonts.toml"]
+import = ["~/.config/alacritty/colorschemes/Everblush.toml", "~/.config/alacritty/fonts.toml"]
 live_config_reload = true
 
 ipc_socket = true
@@ -12,7 +12,7 @@ WINIT_X11_SCALE_FACTOR = "1"
 position = "None"
 dynamic_padding = true
 decorations = "full"
-opacity = 0.9
+opacity = 1
 blur = false
 startup_mode = "Windowed"
 dynamic_title = true

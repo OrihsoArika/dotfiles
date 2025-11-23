@@ -1,30 +1,58 @@
-function fish_prompt --description 'Write out the prompt'
-    set -l last_status $status
-    set -l normal (set_color normal)
-    set -l status_color (set_color brgreen)
-    set -l cwd_color (set_color $fish_color_cwd)
-    set -l vcs_color (set_color brpurple)
-    set -l prompt_status ""
+# name: clearance
+# ---------------
+# Based on idan. Display the following bits on the left:
+# - Virtualenv name (if applicable, see https://github.com/adambrenecki/virtualfish)
+# - Current directory name
+# - Git branch and dirty state (if inside a git repo)
 
-    # Since we display the prompt on a new line allow the directory names to be longer.
-    set -q fish_prompt_pwd_dir_length
-    or set -lx fish_prompt_pwd_dir_length 0
+function _git_branch_name
+  echo (command git symbolic-ref HEAD 2> /dev/null | sed -e 's|^refs/heads/||')
+end
 
-    # Color the prompt differently when we're root
-    set -l suffix '❯'
-    if functions -q fish_is_root_user; and fish_is_root_user
-        if set -q fish_color_cwd_root
-            set cwd_color (set_color $fish_color_cwd_root)
-        end
-        set suffix '#'
+function _git_is_dirty
+  echo (command git status -s --ignore-submodules=dirty 2> /dev/null)
+end
+
+function fish_prompt
+  set -l last_status $status
+
+  set -l cyan (set_color cyan)
+  set -l yellow (set_color yellow)
+  set -l red (set_color red)
+  set -l blue (set_color blue)
+  set -l green (set_color green)
+  set -l normal (set_color normal)
+
+  set -l cwd $blue(pwd | sed "s:^$HOME:~:")
+
+  # Output the prompt, left to right
+
+  # Display [venvname] if in a virtualenv
+  if set -q VIRTUAL_ENV
+      echo -n -s (set_color -b cyan black) '[' (basename "$VIRTUAL_ENV") ']' $normal ' '
+  end
+
+  # Print pwd or full path
+  echo -n -s $cwd $normal
+
+  # Show git branch and status
+  if [ (_git_branch_name) ]
+    set -l git_branch (_git_branch_name)
+
+    if [ (_git_is_dirty) ]
+      set git_info '(' $yellow $git_branch "±" $normal ')'
+    else
+      set git_info '(' $green $git_branch $normal ')'
     end
+    echo -n -s ' · ' $git_info $normal
+  end
 
-    # Color the prompt in red on error
-    if test $last_status -ne 0
-        set status_color (set_color $fish_color_error)
-        set prompt_status $status_color "[" $last_status "]" $normal
-    end
+  set -l prompt_color $red
+  if test $last_status = 0
+    set prompt_color $normal
+  end
 
-    echo -s (prompt_login) ' ' $cwd_color (prompt_pwd) $vcs_color (fish_vcs_prompt) $normal ' ' $prompt_status
-    echo -n -s $status_color $suffix ' ' $normal
+  # Terminate with a nice prompt char
+  echo -e ''
+  echo -e -n -s $prompt_color '⟩ ' $normal
 end
