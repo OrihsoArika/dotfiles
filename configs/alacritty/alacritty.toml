@@ -1,5 +1,5 @@
 [general]
-import = ["~/.config/alacritty/colorschemes/Everblush.toml", "~/.config/alacritty/fonts.toml"]
+import = ["~/.config/alacritty/colorschemes/gruvbox_material_medium_light.toml", "~/.config/alacritty/fonts.toml"]
 live_config_reload = true
 
 ipc_socket = true
@@ -13,7 +13,7 @@ position = "None"
 dynamic_padding = true
 decorations = "full"
 opacity = 1
-blur = false
+blur = true
 startup_mode = "Windowed"
 dynamic_title = true
 class = { instance = "Alacritty", general = "Alacritty" }
@@ -24,8 +24,8 @@ columns = 80
 lines = 24
 
 [window.padding]
-x = 8
-y = 8
+x = 4
+y = 4
 
 [scrolling]
 history = 10000
