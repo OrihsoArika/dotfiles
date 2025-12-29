@@ -54,3 +54,5 @@
 ;; (unpin! t)
 
 (package! kanagawa-themes)
+(package! lsp-mode)
+(package! org-roam)
