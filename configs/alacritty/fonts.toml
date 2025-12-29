@@ -3,7 +3,7 @@ size = 14
 builtin_box_drawing = true
 
 [font.normal]
-family = "FantasqueSansM NErd Font"
+family = "BlexMono NErd Font"
 
 [font.offset]
 x = 0
