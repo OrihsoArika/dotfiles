@@ -4,21 +4,21 @@ killall compton
 killall polybar 
 killall dunst
 
-redshift -x 
+# redshift -x 
 
-killall redshift
+# killall redshift
 
 while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
 while pgrep -u $UID -x compton >/dev/null; do sleep 1; done
-while pgrep -u $UID -x redshift >/dev/null; do sleep 1; done
+# while pgrep -u $UID -x redshift >/dev/null; do sleep 1; done
 while pgrep -u $UID -x dunst >/dev/null; do sleep 1; done
 
 compton &
 
-redshift &
+# redshift &
 
 otd-daemon &
 
-polybar -r root &
+polybar -r &
 
 dunst &

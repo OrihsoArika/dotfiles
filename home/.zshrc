@@ -76,4 +76,8 @@ export ARCHFLAGS="-arch $(uname -m)"
 . "$HOME/.cargo/env"
 
 export EDITOR=vim
+export PATH="$PATH:$HOME/.config/emacs/bin"
+export PATH="$PATH:/usr/sbin"
+# Set up fzf key bindings and fuzzy completion
+source <(fzf --zsh)
 

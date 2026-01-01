@@ -1,3 +1,7 @@
+#+title: Config
+
+* Literate Emacs configuration file :3€
+#+begin_src emacs-lisp :tangle config.el
 ;;; $DOOMDIR/config.el -*- lexical-binding: t; -*-
 
 ;; Place your private configuration here! Remember, you do not need to run 'doom
@@ -185,3 +189,4 @@
 (map! :n "SPC j" 'move-text-down)
 (map! :n "SPC k" 'move-text-up)
 
+#+end_src
